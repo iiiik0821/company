@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品售后与询问 - 云端智农科技有限公司</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2d5016;
+            --secondary-color: #4a7c29;
+            --accent-color: #6c9b3d;
+            --light-color: #f0f4ea;
+            --dark-color: #1a2e0d;
+        }
+        
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.7;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        h4 {
+            font-size: 1.25rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .card {
+            margin-bottom: 2rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        img {
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-title {
+            font-weight: 600;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .hero {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                云端智农
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">核心产品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="company.html">公司简介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="structure.html">公司架构</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="training.html">团队建设与发展规划</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="support.html">产品售后与询问</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-4">产品售后与询问</h1>
+                    <p class="lead mb-6">为您提供全方位的技术支持与服务</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 售后服务 -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">售后服务</h2>
+                <p class="text-muted">专业、及时、高效的技术支持</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            </div>
+                        <h3 class="card-title mb-3">7x24小时技术支持</h3>
+                        <p class="card-text">
+                            提供全天候技术支持服务，确保您在使用过程中遇到的问题能够及时得到解决。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            </div>
+                        <h3 class="card-title mb-3">设备维护与保养</h3>
+                        <p class="card-text">
+                            定期为您的无人机设备提供专业的维护与保养服务，延长设备使用寿命。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            </div>
+                        <h3 class="card-title mb-3">软件更新与升级</h3>
+                        <p class="card-text">
+                            提供系统软件的定期更新与升级服务，确保您始终使用最新版本的功能。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            </div>
+                        <h3 class="card-title mb-3">操作培训</h3>
+                        <p class="card-text">
+                            为您的团队提供专业的设备操作培训，确保每个人都能熟练使用我们的系统。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            </div>
+                        <h3 class="card-title mb-3">备件供应</h3>
+                        <p class="card-text">
+                            提供充足的备件供应，确保设备出现故障时能够及时更换，减少停机时间。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            </div>
+                        <h3 class="card-title mb-3">技术文档</h3>
+                        <p class="card-text">
+                            提供详细的技术文档和操作手册，帮助您更好地理解和使用我们的产品。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">联系方式</h2>
+                <p class="text-muted">多种渠道，随时为您服务</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="mb-4">联系信息</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <strong>电话：</strong>400-123-4567
+                            </li>
+                            <li class="mb-3">
+                                <strong>邮箱：</strong>info@yunduanzhinong.com
+                            </li>
+                            <li class="mb-3">
+                                <strong>地址：</strong>吉林省长春市吉林大学
+                            </li>
+                            <li class="mb-3">
+                                <strong>工作时间：</strong>周一至周五 9:00-18:00
+                            </li>
+                        </ul>
+                        <div class="mt-6">
+                            <h4 class="mb-3">关注我们</h4>
+                            <div class="social-icons">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="mb-4">在线咨询</h3>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">姓名</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">邮箱</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">电话</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">主题</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">请选择</option>
+                                    <option value="product">产品咨询</option>
+                                    <option value="support">技术支持</option>
+                                    <option value="cooperation">合作洽谈</option>
+                                    <option value="recruitment">招聘咨询</option>
+                                    <option value="other">其他</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">留言</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">提交</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">常见问题</h2>
+                <p class="text-muted">为您解答常见疑问</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="heading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                        1. 云端智农系统的核心功能是什么？
+                                    </button>
+                                </h2>
+                                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        云端智农系统的核心功能是实现"感知-决策-作业"一体化的智慧农业闭环管理。通过无人机搭载多光谱相机等设备对农田进行全方位扫描，收集数据后由AI算法进行分析，生成最优作业方案，最后由无人机执行精准作业，如变量喷洒、精准灌溉等。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="heading2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                        2. 系统适用于哪些农业场景？
+                                    </button>
+                                </h2>
+                                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        系统广泛适用于各类农业生产场景，包括大田作物（小麦、玉米、水稻等）、果园（苹果、梨、柑橘等）、设施农业（温室大棚）等。无论您是大规模农场还是小型种植户，我们的系统都能为您提供定制化的解决方案。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="heading3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                        3. 如何保证无人机作业的安全性？
+                                    </button>
+                                </h2>
+                                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        我们的系统具备多重安全保障机制：首先，在起飞前会进行安全条件判断，确保天气、地形等因素符合飞行要求；其次，无人机配备了先进的避障系统，能够自动避开障碍物；最后，我们的飞手都经过专业培训并持有CAAC无人机驾驶员执照，确保操作规范安全。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="heading4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                        4. 系统的成本效益如何？
+                                    </button>
+                                </h2>
+                                <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        系统通过精准作业，能够显著减少农药、化肥的使用量，降低成本；同时，提高作业效率，减少人工投入；此外，通过数据分析优化种植管理，提高产量和品质。根据实际案例，使用我们的系统后，农户的综合成本可降低20-30%，产量可提高15-20%。
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item mb-3">
+                                <h2 class="accordion-header" id="heading5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                                        5. 如何获取系统的技术支持？
+                                    </button>
+                                </h2>
+                                <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        我们提供7x24小时技术支持服务，您可以通过电话、邮箱或在线咨询与我们联系。同时，我们会定期为您的团队提供操作培训，并提供详细的技术文档和操作手册。此外，我们还会定期进行系统软件的更新与升级，确保您始终使用最新版本的功能。
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>云端智农科技有限公司</h3>
+                    <p>聚焦低空经济与现代农业，打造"感知-决策-作业"一体化智慧农业系统</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>联系我们</h4>
+                    <p>电话：400-123-4567</p>
+                    <p>邮箱：info@yunduanzhinong.com</p>
+                    <p>地址：吉林省长春市吉林大学</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>快速链接</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">首页</a></li>
+                        <li><a href="product.html" class="text-light">核心产品</a></li>
+                        <li><a href="company.html" class="text-light">公司简介</a></li>
+                        <li><a href="support.html" class="text-light">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4 text-center">
+                <p>&copy; 2026 云端智农科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

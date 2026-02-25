@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .image-container {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .status.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .status.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <h1>图片加载测试</h1>
+    
+    <div class="status success">
+        <p>页面加载时间: <span id="load-time"></span></p>
+    </div>
+    
+    <div class="image-container">
+        <h2>测试图片 1: 农业技术发展阶段</h2>
+        <img id="img1" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=traditional%20vs%20modern%20agriculture%20evolution&image_size=landscape_16_9" alt="农业技术发展阶段" onload="imageLoaded('img1')" onerror="imageError('img1')">
+        <p>URL: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=traditional%20vs%20modern%20agriculture%20evolution&image_size=landscape_16_9</p>
+        <div id="status1" class="status">图片加载中...</div>
+    </div>
+    
+    <div class="image-container">
+        <h2>测试图片 2: 无人机数据监测</h2>
+        <img id="img2" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=drone%20flying%20over%20farmland&image_size=landscape_16_9" alt="无人机数据监测" onload="imageLoaded('img2')" onerror="imageError('img2')">
+        <p>URL: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=drone%20flying%20over%20farmland&image_size=landscape_16_9</p>
+        <div id="status2" class="status">图片加载中...</div>
+    </div>
+    
+    <div class="image-container">
+        <h2>测试图片 3: 简单测试</h2>
+        <img id="img3" src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=test&image_size=square" alt="简单测试" onload="imageLoaded('img3')" onerror="imageError('img3')">
+        <p>URL: https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=test&image_size=square</p>
+        <div id="status3" class="status">图片加载中...</div>
+    </div>
+    
+    <script>
+        // 记录页面加载时间
+        window.onload = function() {
+            const loadTime = new Date().toLocaleString();
+            document.getElementById('load-time').textContent = loadTime;
+        };
+        
+        // 图片加载成功处理
+        function imageLoaded(imgId) {
+            const statusEl = document.getElementById('status' + imgId.replace('img', ''));
+            statusEl.className = 'status success';
+            statusEl.textContent = '图片加载成功！';
+        }
+        
+        // 图片加载失败处理
+        function imageError(imgId) {
+            const statusEl = document.getElementById('status' + imgId.replace('img', ''));
+            statusEl.className = 'status error';
+            statusEl.textContent = '图片加载失败！';
+        }
+    </script>
+</body>
+</html>

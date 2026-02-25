@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司架构 - 云端智农科技有限公司</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2d5016;
+            --secondary-color: #4a7c29;
+            --accent-color: #6c9b3d;
+            --light-color: #f0f4ea;
+            --dark-color: #1a2e0d;
+        }
+        
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.7;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        h4 {
+            font-size: 1.25rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .card {
+            margin-bottom: 2rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        img {
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-title {
+            font-weight: 600;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(45, 80, 22, 0.8), rgba(45, 80, 22, 0.9)), url('https://images.unsplash.com/photo-1573164574101-732476c68788?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .org-chart {
+            position: relative;
+        }
+        
+        .org-box {
+            background-color: var(--light-color);
+            border: 2px solid var(--secondary-color);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .org-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .org-level-1 .org-box {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .org-level-2 .org-box {
+            background-color: #e8f0e0;
+        }
+        
+        .org-level-3 .org-box {
+            background-color: #d8e6d0;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                云端智农
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">核心产品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="company.html">公司简介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="structure.html">公司架构</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="training.html">团队建设与发展规划</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="support.html">产品售后与询问</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-4">公司架构</h1>
+                    <p class="lead mb-6">扁平化+敏捷工作组的现代企业组织架构</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 团队成员 -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">团队成员</h2>
+                <p class="text-muted">跨学科复合型精英团队</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mb-6">
+                    <p class="text-center mb-6">
+                        本团队由吉林大学的6名本科生和2名指导老师组成，汇聚了交通工程、智能制造工程、材料成型及控制工程、哲学、临床医学五个专业的学生力量。是一支兼具"硬核技术攻坚"与"商业落地思维"的复合型精英队伍。团队成员在各类国家级竞赛与科研项目中积累了丰富的实战经验。
+                    </p>
+                </div>
+                <!-- 指导老师 -->
+                <div class="col-lg-12 mb-8">
+                    <h3 class="text-center mb-6">指导老师</h3>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card p-4 text-center">
+                                <h4 class="card-title text-success">机械与航空航天工程学院 教授</h4>
+                                <p class="card-text mb-2">吉林大学</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card p-4 text-center">
+                                <h4 class="card-title text-success">哲学社会学院 教授</h4>
+                                <p class="card-text mb-2">吉林大学</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 团队分工 -->
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h3 class="card-title mb-3">硬件与新材料团队</h3>
+                        <p class="card-text">
+                            由智能制造工程、材料成型及控制工程领域的成员组成，了解先进纳米颗粒增强轻量化合金材料的制备与智能制造、智能成型等技术。这一核心能力直接赋能农业无人机的机身轻量化改造与核心零部件寿命提升，建立起竞争壁垒。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-brain"></i>
+                        </div>
+                        <h3 class="card-title mb-3">算法与控制团队</h3>
+                        <p class="card-text">
+                            团队成员具备丰富的交通工程背景。这为复杂农田环境下的多无人机协同控制、底层动态决策算法以及最优路径规划提供了强大的数据建模与算力支撑。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="card-title mb-3">生态闭环与伦理团队</h3>
+                        <p class="card-text">
+                            引入医学与哲学专业人才，对农药沉降规律、人体健康影响以及农业技术伦理进行科学评估，确保产品符合绿色农业长远发展要求，为进军高端市场和获取政策支持提供背书。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 组织架构 -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">组织架构</h2>
+                <p class="text-muted">扁平化+敏捷工作组</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="org-chart">
+                            <div class="org-level-1 mb-4">
+                                <div class="org-box text-center p-4">
+                                    <h3>核心团队</h3>
+                                    <p>扁平化管理，敏捷协作</p>
+                                </div>
+                            </div>
+                            <div class="org-level-2 mb-4">
+                                <div class="row g-4">
+                                    <div class="col-md-4">
+                                        <div class="org-box text-center p-4">
+                                            <h4>技术研发组</h4>
+                                            <p>硬件与算法开发</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="org-box text-center p-4">
+                                            <h4>市场运营组</h4>
+                                            <p>商业转化与用户拓展</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="org-box text-center p-4">
+                                            <h4>产品合规顾问</h4>
+                                            <p>生态健康与安全评估</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="org-level-3">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="org-box text-center p-4">
+                                            <h5>硬件与新材料团队</h5>
+                                            <p>轻量化材料研发与3D打印</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="org-box text-center p-4">
+                                            <h5>算法与控制团队</h5>
+                                            <p>无人机控制与路径规划</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="org-box text-center p-4">
+                                            <h5>专家顾问委员会</h5>
+                                            <p>吉林大学指导老师团队</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 职能划分 -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">职能划分</h2>
+                <p class="text-muted">各部门职责与分工</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-6">
+                    <div class="card p-6">
+                        <h3 class="card-title mb-4">技术研发中枢</h3>
+                        <p class="card-text mb-4">
+                            作为核心业务部门，是公司的"重火力点"。为了实现软硬件的无缝咬合，研发中枢内部实行双线并行的敏捷开发：
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <strong>硬件与新材料攻坚线：</strong> 由智能制造工程与材料成型及控制工程专业的成员主导。负责"云端智农"系统底层硬件的落地，包括无人机挂载设备（如多光谱相机云台、喷洒装置）的机械结构设计、机身轻量化材料的应用与3D打印成型。确保无人机在复杂农田环境下的物理执行能力、抗风性与续航效能。
+                            </li>
+                            <li class="mb-3">
+                                <strong>算法与控制攻坚线：</strong> 由交通工程专业的成员主导。负责"感知—决策"闭环中的中枢逻辑，主攻低空空域的无人机航线规划、多机协同编队调度、避障算法，以及将农田扫描数据转化为精准作业指令的决策模型构建。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-6">
+                    <div class="card p-6">
+                        <h3 class="card-title mb-4">市场运营组</h3>
+                        <p class="card-text mb-4">
+                            战略运营与公共关系部充当商业转化引擎，由哲学专业的成员负责。作为公司的"泥腿子"与"排头兵"。
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                依托人文社科的宏观思维，深度扎根一线农区进行痛点调研与实地路测；负责标杆示范农田项目的落地执行、商务洽谈及农户使用反馈收集；建立"前线-后方"数据闭环，将真实的农田痛点实时反哺给技术研发中枢，拒绝闭门造车。
+                            </li>
+                            <li class="mb-3">
+                                同时，负责公司文书撰写与路演包装、政府涉农政策研判，以及与地方村委会、农业合作社的洽谈对接与实地调研，确保技术落地符合农村真实需求。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-6">
+                    <div class="card p-6">
+                        <h3 class="card-title mb-4">综合统筹组</h3>
+                        <p class="card-text mb-4">
+                            生态健康与产品合规部作为项目保障，由临床医学专业的成员跨界主导。
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                负责评估无人机喷洒作业（如农药、除草剂的飘移）对农田生态系统及人居环境的健康安全影响。建立农资使用的健康安全标准与作业合规指南，提升项目在环保与大健康层面的社会效益，构建差异化的竞争壁垒。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-6">
+                    <div class="card p-6">
+                        <h3 class="card-title mb-4">专家顾问委员会</h3>
+                        <p class="card-text mb-4">
+                            由吉林大学的指导老师组成。
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                为项目提供顶层研发设计指导、重点实验室资源接入及产学研合作背书，把控核心技术演进方向与商业化落地的底层风险。
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>云端智农科技有限公司</h3>
+                    <p>聚焦低空经济与现代农业，打造"感知-决策-作业"一体化智慧农业系统</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>联系我们</h4>
+                    <p>电话：400-123-4567</p>
+                    <p>邮箱：info@yunduanzhinong.com</p>
+                    <p>地址：吉林省长春市吉林大学</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>快速链接</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">首页</a></li>
+                        <li><a href="product.html" class="text-light">核心产品</a></li>
+                        <li><a href="company.html" class="text-light">公司简介</a></li>
+                        <li><a href="support.html" class="text-light">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4 text-center">
+                <p>&copy; 2026 云端智农科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
