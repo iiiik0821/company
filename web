@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司简介 - 云端智农科技有限公司</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2d5016;
+            --secondary-color: #4a7c29;
+            --accent-color: #6c9b3d;
+            --light-color: #f0f4ea;
+            --dark-color: #1a2e0d;
+        }
+        
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.7;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+        }
+        
+        h4 {
+            font-size: 1.25rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .card {
+            margin-bottom: 2rem;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        img {
+            margin-bottom: 1.5rem;
+        }
+        
+        .card-title {
+            font-weight: 600;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255, 255, 255, 0.8) !important;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .hero {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .process-step {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .process-step.active {
+            border-left: 5px solid var(--secondary-color);
+        }
+        
+        .timeline {
+            position: relative;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+        }
+        
+        .timeline-header {
+            position: relative;
+        }
+        
+        .timeline-header::before {
+            content: '';
+            position: absolute;
+            left: -40px;
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--secondary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                云端智农
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">核心产品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="company.html">公司简介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="structure.html">公司架构</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="training.html">团队建设与发展规划</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="support.html">产品售后与询问</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-4">公司简介</h1>
+                    <p class="lead mb-6">以低空新质生产力赋能传统农业</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业概况 -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">企业概况</h2>
+                <p class="text-muted">高新技术先锋企业</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="mb-6">
+                        <p class="mb-4">
+                            <strong>云端智农科技有限公司是一家深度融合"低空经济"与"现代农业"的高新技术先锋企业。</strong>
+                        </p>
+                        <p class="mb-4">
+                            面对保障国家粮食安全、破解农村劳动力老龄化断层的时代考卷，我们精准戳中行业痛处：
+                        </p>
+                        <ul class="list-unstyled mb-4">
+                            <li class="mb-2"><strong>数据孤岛：</strong> 海量农业数据往往沦为无法变现的"信息孤岛"</li>
+                            <li class="mb-2"><strong>执行脱节：</strong> 重数据监测、轻落地执行、各环节严重割裂</li>
+                            <li class="mb-2"><strong>资源浪费：</strong> 粗放式传统农机作业带来高昂的资源浪费与生态负担</li>
+                        </ul>
+                    </div>
+                    <div class="mb-6">
+                        <p class="mb-4">
+                            <strong>我们的社会使命：以低空新质生产力赋能传统农业</strong>
+                        </p>
+                        <p class="mb-4">
+                            创造性地自主研发了"感知—决策—作业"一体化智慧农业闭环系统，致力于打破技术壁垒，将尖端科技转化为田间地头实实在在的经济价值。
+                        </p>
+                    </div>
+                    <div>
+                        <p class="mb-4">
+                            <strong>核心研发矩阵：全方位—跨学科—一体化</strong>
+                        </p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><strong>软件层面：</strong> 复杂环境航线路径规划、底层智能决策算法</li>
+                            <li class="mb-2"><strong>硬件层面：</strong> 先进装备制造、轻量化合金材料增材制造</li>
+                            <li class="mb-2"><strong>生态层面：</strong> 农业科技伦理、农药精准布施的环境影响测算</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="images/企业概况.png" class="img-fluid rounded-lg shadow" alt="企业概况">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业宗旨与理念 -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">企业宗旨与理念</h2>
+                <p class="text-muted">科技下乡，闭环增效</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-6">
+                        <h3 class="card-title mb-4">企业宗旨</h3>
+                        <p class="card-text">
+                            我们深知，脱离了实际产出的农业科技只是空中楼阁。为此，我们将"科技下乡，闭环增效"作为我们的企业宗旨和行动指南，这不仅体现着云端智农诞生的初心，更是企业建设的终极目标。
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-6">
+                        <h3 class="card-title mb-4">技术落地理念</h3>
+                        <p class="card-text">
+                            为了践行"科技下乡，闭环增效"的宗旨，公司确立了明确的技术落地理念——以低空多模态环境感知为基石，以智能算法决策大脑为中枢，以精准无人化农机作业为终端。我们坚决拒绝脱离田间地头的、概念化的"伪智能"，坚持将高精尖的交叉技术，转化为能够切实提升一线农业生产力的实用型落地工具，扎扎实实地为农业农村现代化贡献应有力量。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业文化 -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">企业文化</h2>
+                <p class="text-muted">三位一体核心价值观</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-hand-thumbs-up"></i>
+                        </div>
+                        <h3 class="card-title mb-3">务实求真</h3>
+                        <p class="card-text mb-4">
+                            <strong>行为底线：拒绝"伪智能"，双脚扎进泥土</strong>
+                        </p>
+                        <ul class="list-unstyled text-left">
+                            <li class="mb-2">立足田间地头，产品研发绝不闭门造车</li>
+                            <li class="mb-2">以解决一线农业生产痛点为唯一导向</li>
+                            <li class="mb-2">用真实农田环境的测试数据校验技术闭环</li>
+                            <li class="mb-2">聚焦效率提升、成本降低、药害残留减少</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightbulb"></i>
+                        </div>
+                        <h3 class="card-title mb-3">交叉创新</h3>
+                        <p class="card-text mb-4">
+                            <strong>竞争壁垒：多学科深度融合，构建技术护城河</strong>
+                        </p>
+                        <ul class="list-unstyled text-left">
+                            <li class="mb-2">机械硬件制造的硬实力</li>
+                            <li class="mb-2">轻量化材料成型控制的微观探索</li>
+                            <li class="mb-2">交通路径规划的算法大脑</li>
+                            <li class="mb-2">农业伦理的人文关怀</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-5 text-center">
+                        <div class="feature-icon">
+                            <i class="bi bi-heart"></i>
+                        </div>
+                        <h3 class="card-title mb-3">责任担当</h3>
+                        <p class="card-text mb-4">
+                            <strong>精神内核：情怀与长期主义</strong>
+                        </p>
+                        <ul class="list-unstyled text-left">
+                            <li class="mb-2">不赚快钱，坚持长期主义</li>
+                            <li class="mb-2">将企业利益与国家乡村振兴战略绑定</li>
+                            <li class="mb-2">推动低空经济在农业领域的应用</li>
+                            <li class="mb-2">做有理想、有温度、有社会责任感的农业科技探路者</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业发展愿景 -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="display-5 section-title">企业发展愿景</h2>
+                <p class="text-muted">成为国内低空智慧农业领域的标准制定者与领跑者</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bg-white p-6 rounded-lg shadow mb-8">
+                        <h3 class="mb-4">"三步走"战略路径</h3>
+                        <div class="timeline">
+                            <div class="timeline-item mb-6">
+                                <div class="timeline-header">
+                                    <h4 class="text-success">短期规划（1-3年）：突破与验证</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        聚焦"感知—决策—作业"一体化系统的核心技术攻关与高标准农田的示范性应用，建立标准化的低空农业作业流程，完成市场初步验证与口碑积累。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item mb-6">
+                                <div class="timeline-header">
+                                    <h4 class="text-success">中期规划（4-7年）：生态与拓展</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        扩大软硬件产能与渠道覆盖，开放农业数据API接口，构建全场景低空农业服务生态；依托海量田间数据反哺算法优化，拓展更丰富的农业应用场景。
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-header">
+                                    <h4 class="text-success">长期规划（8年以上）：平台与标准</h4>
+                                </div>
+                                <div class="timeline-body">
+                                    <p>
+                                        打造国家级智慧农业核心生态平台，深化绿色农业可持续发展，参与或主导低空农业作业国家标准的制定，推动中国农业迈入"主动智能"新纪元。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="text-center">
+                        <img src="images/发展规划图.jpg" class="img-fluid rounded-lg shadow" alt="发展愿景">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>云端智农科技有限公司</h3>
+                    <p>聚焦低空经济与现代农业，打造"感知-决策-作业"一体化智慧农业系统</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>联系我们</h4>
+                    <p>电话：400-123-4567</p>
+                    <p>邮箱：info@yunduanzhinong.com</p>
+                    <p>地址：吉林省长春市吉林大学</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>快速链接</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">首页</a></li>
+                        <li><a href="product.html" class="text-light">核心产品</a></li>
+                        <li><a href="company.html" class="text-light">公司简介</a></li>
+                        <li><a href="support.html" class="text-light">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-4 text-center">
+                <p>&copy; 2026 云端智农科技有限公司 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
